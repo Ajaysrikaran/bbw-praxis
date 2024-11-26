@@ -1,0 +1,41 @@
+
+.about-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Titel-Styling */
+.about-container h1 {
+    font-size: 32px;
+    color: #364147; /* Dunkelgraue Farbe für den Titel */
+    margin-bottom: 20px; /* Abstand unter dem Titel */
+}
+
+/* Paragraphen-Styling */
+.about-container p {
+    font-size: 16px; /* Normale Schriftgrösse für Absätze */
+    line-height: 1.6; /* Besserer Zeilenabstand für Lesbarkeit */
+    color: #4f5b66; /* Mittleres Grau für den Text */
+    margin-bottom: 20px; /* Abstand unter jedem Absatz */
+    text-align: left; /* Linksbündige Ausrichtung der Absätze */
+}
+
+/* Responsive Design für Mobilgeräte */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 15px; /* Weniger Innenabstand auf kleinen Bildschirmen */
+    }
+
+    .about-container h1 {
+        font-size: 28px; /* Kleinere Schriftgrösse für den Titel auf mobilen Geräten */
+    }
+
+    .about-container p {
+        font-size: 14px; /* Kleinere Schriftgrösse für die Absätze */
+    }
+}

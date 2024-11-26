@@ -1,32 +1,37 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import "./Header.css"; // Header spezifisches CSS
 
 const activeStyle = {
-  color: "purple",
+  color: "white",
+  borderBottom: "3px solid #ffdd57",
 };
 
 export default function Header() {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">
-              <img alt="Just skate." src="/images/logo.png" />
-            </Link>
-          </li>
-          <li>
-            <NavLink activeStyle={activeStyle} to="/boards">
-              Boards
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeStyle={activeStyle} to="/cart">
-              Cart
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <header className="navbar">
+        <nav className="navbar-content">
+          <Link to="/" className="navbar-logo">
+            <img alt="Company Logo" src="/images/logo.png" />
+          </Link>
+          <ul className="navbar-list">
+            <li className="navbar-item">
+              <NavLink activeStyle={activeStyle} to="/home" className="navbar-link">
+                Home
+              </NavLink>
+            </li>
+            <li className="navbar-item">
+              <NavLink activeStyle={activeStyle} to="/about" className="navbar-link">
+                Über Mich
+              </NavLink>
+            </li>
+            <li className="navbar-item">
+              <NavLink activeStyle={activeStyle} to="/komponente" className="navbar-link">
+                PC-Komponenten
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </header>
   );
 }

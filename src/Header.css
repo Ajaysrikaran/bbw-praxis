@@ -1,0 +1,60 @@
+/* Header und Navbar Stile */
+
+.navbar {
+    position: fixed; /* Fixiert die Navbar am oberen Bildschirmrand */
+    top: 10px; /* Abstand vom oberen Bildschirmrand */
+    left: 50%;
+    transform: translateX(-50%); /* Zentriert die Navbar horizontal */
+    background: rgba(255, 255, 255, 0.9); /* Heller, halbtransparenter Hintergrund */
+    padding: 15px 40px; /* Vergrößerter Innenabstand */
+    border-radius: 20px; /* Große abgerundete Ecken für ein weiches Aussehen */
+    z-index: 1000; /* Immer sichtbar über anderen Elementen */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Leichter Schatten für mehr Tiefe */
+    max-width: 95%; /* Begrenzung der Breite auf 95% des Bildschirms */
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin: 0 25px; /* Größerer Abstand zwischen den Links für bessere Lesbarkeit */
+}
+
+.navbar-logo img {
+    height: 60px; /* Größeres Logo für bessere Sichtbarkeit */
+}
+
+.navbar-link {
+    color: #364147;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px; /* Größere Schriftgröße für klarere Navigation */
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+.navbar-link:hover {
+    color: #ff6347; /* Ein schöner Orangeton für den Hover-Effekt */
+    border-bottom: 3px solid #ff6347; /* Ein Hover-Effekt, der die Aufmerksamkeit auf den Link lenkt */
+}
+
+/* Mobile Anpassungen */
+@media (max-width: 768px) {
+    .navbar-content {
+        flex-direction: column; /* Stapelt die Elemente übereinander bei kleinen Bildschirmen */
+        align-items: flex-start;
+    }
+
+    .navbar-item {
+        margin: 15px 0; /* Vertikaler Abstand zwischen den Links bei kleinen Bildschirmen */
+    }
+}

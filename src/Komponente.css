@@ -1,0 +1,48 @@
+.komponente-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.komponente-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.komponente-item {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    flex: 1 1 calc(25% - 40px); /* Verteilung der Elemente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.komponente-item:hover {
+    transform: translateY(-10px); /* Schöner Hover-Effekt für mehr Interaktivität */
+}
+
+.komponente-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.komponente-item h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #364147;
+}
+
+.komponente-item p {
+    font-size: 16px;
+    color: #555;
+}

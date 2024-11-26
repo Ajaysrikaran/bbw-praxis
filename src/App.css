@@ -1,219 +1,82 @@
-html {
-  height: 100%;
-}
-
+/* Gesamtseite */
 body {
-  font-family: open sans, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
   color: #364147;
-  background-color: #fff;
+  background-color: #fff; /* Weißer Hintergrund wie ursprünglich */
 }
 
+/* Haupt-Wrapper */
 #root {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+  min-height: 100vh;
 }
 
+/* Hauptinhalt */
 .content {
-  flex: 1 0 auto;
+  flex: 1;
   padding: 20px;
 }
 
-header {
-  display: flex;
-  padding-left: 20px;
-}
-
-header img {
-  max-height: 100px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
+/* Footer */
 footer {
+  flex-shrink: 0;
   text-align: center;
   color: gray;
-  padding: 20px 0 20px 0;
-  flex-shrink: 0;
+  padding: 20px 0;
   background-color: gainsboro;
+  width: 100%;
 }
 
-header ul {
-  padding-inline-start: 20px;
-}
-
-header li {
-  display: inline;
-  margin-right: 20px;
-}
-
-#detail img {
-  max-height: 400;
-}
-
-#price {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-weight: normal;
-  font-size: 1.5em;
-}
-
-#products {
-  display: flex;
-  justify-content: center;
-}
-
-.product {
-  display: flex;
-  align-items: flex-end;
-  max-width: 350px;
+/* Hauptcontainer */
+.home-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
   text-align: center;
 }
 
-#cart img {
-  height: 150px;
-}
-
-#cart ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-#cart td,
-#cart th {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-input[type="number"] {
-  width: 50px;
-}
-
-main {
-  padding: 20px;
-}
-
-.cart-item {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-a {
-  color: #faa541;
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 36px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h1,
-h2,
-h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-weight: normal;
-}
-
-img {
-  max-width: 100%;
+/* Animation */
+.home-animation {
+  max-width: 300px;
   height: auto;
-  border: 0;
-  vertical-align: middle;
+  margin: 30px 0;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #364147;
+/* Buttons */
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
 .btn {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 3px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.btn.disabled,
-.btn[disabled],
-fieldset[disabled] .btn {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
+.btn-primary {
+  background-color: #364147;
+  color: #fff;
 }
 
-p[role="alert"] {
-  display: inline;
-  margin-left: 10px;
-  color: red;
+.btn-primary:hover {
+  background-color: #2a333c;
 }
 
-div[role="alert"] {
-  color: red;
+.btn-secondary {
+  background-color: #faa541;
+  color: #fff;
 }
 
-/* input[type="submit"] {
-  margin-top: 20px;
-} */
-
-form > div {
-  margin-bottom: 20px;
-}
-
-.lds-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.lds-dual-ring {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-}
-.lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border-radius: 50%;
-  border: 6px solid #cef;
-  border-color: #cef transparent #cef transparent;
-  animation: lds-dual-ring 1.2s linear infinite;
-}
-@keyframes lds-dual-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.btn-secondary:hover {
+  background-color: #e36b40;
 }
