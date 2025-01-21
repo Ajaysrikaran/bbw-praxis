@@ -3,6 +3,7 @@
     margin: 50px auto;
     padding: 20px;
     text-align: center;
+    margin-top: 110px;
 }
 
 .komponente-list {
@@ -13,36 +14,65 @@
 }
 
 .komponente-item {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #F5F5F5; /* Heller Hintergrund */
+    border-radius: 12px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Weicherer Schatten */
     padding: 20px;
     max-width: 300px;
     flex: 1 1 calc(25% - 40px); /* Verteilung der Elemente */
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+    color: #333; /* Dunkler Text für Kontrast */
 }
 
+/* Hover-Effekt */
 .komponente-item:hover {
-    transform: translateY(-10px); /* Schöner Hover-Effekt für mehr Interaktivität */
+    transform: translateY(-10px); /* Leichtes Schweben bei Hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Verstärkter Schatten bei Hover */
+    background-color: #7C40FF; /* Dunklerer Ton beim Hover */
 }
 
 .komponente-image {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 8px; /* Abgerundete Ecken für Bilder */
     margin-bottom: 15px;
+    background: white; /* Weißer Hintergrund für Bilder */
+    padding: 5px; /* Abstand für Bilder */
 }
 
 .komponente-item h2 {
     font-size: 20px;
     margin: 10px 0;
-    color: #364147;
+    color: #000; /* Schwarzer Text für Überschriften */
+    text-align: center;
 }
 
 .komponente-item p {
     font-size: 16px;
-    color: #555;
+    color: #555; /* Mittleres Grau für Text */
+    line-height: 1.5; /* Bessere Lesbarkeit durch mehr Abstand */
+    text-align: center;
+}
+
+/* Responsives Design */
+@media (max-width: 1200px) {
+    .komponente-item {
+        flex: 1 1 calc(33.33% - 40px); /* Drei Elemente pro Zeile */
+    }
+}
+
+@media (max-width: 800px) {
+    .komponente-item {
+        flex: 1 1 calc(50% - 40px); /* Zwei Elemente pro Zeile */
+    }
+}
+
+@media (max-width: 480px) {
+    .komponente-item {
+        flex: 1 1 100%; /* Ein Element pro Zeile */
+    }
 }

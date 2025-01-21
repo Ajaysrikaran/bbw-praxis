@@ -3,6 +3,7 @@
     margin: 50px auto;
     padding: 20px;
     text-align: center;
+    margin-top: 110px;
 }
 
 .animation-container {
@@ -13,7 +14,7 @@
 }
 
 .home-animation {
-    max-width: 300px; /* Anpassen der Größe der Animation */
+    max-width: 380px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

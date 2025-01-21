@@ -17,6 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Flex-wrap sorgt dafür, dass die Inhalte bei zu wenig Platz umgebrochen werden */
 }
 
 .navbar-list {
@@ -31,7 +32,8 @@
 }
 
 .navbar-logo img {
-    height: 60px; /* Größeres Logo für bessere Sichtbarkeit */
+    height: 50px; /* Größe des Logos angepasst */
+    width: auto;
 }
 
 .navbar-link {
@@ -43,18 +45,38 @@
 }
 
 .navbar-link:hover {
-    color: #ff6347; /* Ein schöner Orangeton für den Hover-Effekt */
-    border-bottom: 3px solid #ff6347; /* Ein Hover-Effekt, der die Aufmerksamkeit auf den Link lenkt */
+    color: #5C4AA4; /* Farbe für den Hover-Effekt */
+    border-bottom: 3px solid #5C4AA4; /* Ein Hover-Effekt, der die Aufmerksamkeit auf den Link lenkt */
 }
 
 /* Mobile Anpassungen */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* Weniger Padding auf kleinen Bildschirmen */
+    }
+
     .navbar-content {
         flex-direction: column; /* Stapelt die Elemente übereinander bei kleinen Bildschirmen */
-        align-items: flex-start;
+        align-items: center; /* Zentriert die Navbar-Links */
+    }
+
+    .navbar-list {
+        width: 100%;
+        justify-content: center; /* Zentriere die Liste der Links */
+        flex-wrap: wrap; /* Wrap die Elemente für eine bessere Darstellung */
     }
 
     .navbar-item {
-        margin: 15px 0; /* Vertikaler Abstand zwischen den Links bei kleinen Bildschirmen */
+        margin: 10px 0; /* Vertikaler Abstand zwischen den Links bei kleinen Bildschirmen */
+    }
+
+    .navbar-logo img {
+        height: 40px; /* Kleinere Logo-Größe auf mobilen Geräten */
+        width: auto;
+        margin-bottom: 10px; /* Abstand zwischen Logo und Links */
+    }
+
+    .navbar-link {
+        font-size: 16px; /* Kleinere Schriftgröße für die Links */
     }
 }

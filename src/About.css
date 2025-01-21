@@ -1,41 +1,102 @@
+/* Gesamtseite */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #021E50;
+}
 
 .about-container {
     max-width: 800px;
     margin: 50px auto;
+    margin-top: 140px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    overflow: hidden; /* Verhindert Überlauf */
 }
 
-/* Titel-Styling */
+/* Titel */
 .about-container h1 {
     font-size: 32px;
-    color: #364147; /* Dunkelgraue Farbe für den Titel */
-    margin-bottom: 20px; /* Abstand unter dem Titel */
+    color: #364147;
+    margin-bottom: 20px;
 }
 
-/* Paragraphen-Styling */
+/* Text */
 .about-container p {
-    font-size: 16px; /* Normale Schriftgrösse für Absätze */
-    line-height: 1.6; /* Besserer Zeilenabstand für Lesbarkeit */
-    color: #4f5b66; /* Mittleres Grau für den Text */
-    margin-bottom: 20px; /* Abstand unter jedem Absatz */
-    text-align: left; /* Linksbündige Ausrichtung der Absätze */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4f5b66;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
-/* Responsive Design für Mobilgeräte */
+/* Bildgalerie */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.setup-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+}
+
+/* Video-Container */
+.video-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.setup-video {
+    width: 100%;
+    max-width: 500px; /* Maximale Breite des Videos */
+    height: auto; /* Automatische Höhe */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+    object-fit: contain;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .about-container {
-        padding: 15px; /* Weniger Innenabstand auf kleinen Bildschirmen */
+        padding: 15px;
     }
 
     .about-container h1 {
-        font-size: 28px; /* Kleinere Schriftgrösse für den Titel auf mobilen Geräten */
+        font-size: 28px;
     }
 
     .about-container p {
-        font-size: 14px; /* Kleinere Schriftgrösse für die Absätze */
+        font-size: 14px;
+    }
+
+    .setup-image {
+        max-width: 100%;
+    }
+
+    .setup-video {
+        max-width: 100%;
+        border-radius: 8px;
     }
 }

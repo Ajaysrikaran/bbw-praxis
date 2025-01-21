@@ -1,82 +1,51 @@
-/* Gesamtseite */
-body {
+/* HTML und Body: Mindesthöhe 100% */
+html, body {
+  height: 100%; /* Damit das Layout die gesamte Höhe des Bildschirms einnimmt */
+  margin: 0;
+  padding: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 1.6;
+  color: #364147;
+  background-color: #fff;
+}
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  color: #364147;
-  background-color: #fff; /* Weißer Hintergrund wie ursprünglich */
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Lila zu Blau Farbverlauf */
+  background-attachment: fixed; /* Bleibt beim Scrollen fixiert */
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
 }
+
 
 /* Haupt-Wrapper */
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* Nimmt mindestens die Höhe des Bildschirms ein */
 }
 
 /* Hauptinhalt */
 .content {
-  flex: 1;
-  padding: 20px;
+  flex: 1; /* Flexibler Bereich, der den Platz zwischen Header und Footer füllt */
+  padding: 20px; /* Optionaler Abstand */
+  box-sizing: border-box; /* Zählt Innenabstände zur Gesamtgröße */
 }
 
 /* Footer */
-footer {
-  flex-shrink: 0;
-  text-align: center;
-  color: gray;
-  padding: 20px 0;
-  background-color: gainsboro;
-  width: 100%;
-}
-
-/* Hauptcontainer */
-.home-container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Animation */
-.home-animation {
-  max-width: 300px;
-  height: auto;
-  margin: 30px 0;
-}
-
-/* Buttons */
-.cta-buttons {
-  margin-top: 30px;
+.footer-container {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.btn {
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn-primary {
-  background-color: #364147;
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: #2a333c;
-}
-
-.btn-secondary {
-  background-color: #faa541;
-  color: #fff;
-}
-
-.btn-secondary:hover {
-  background-color: #e36b40;
+  justify-content: space-between; /* Navigation links, Kontakt rechts */
+  align-items: flex-start;
+  padding: 10px 20px; /* Kompakter Abstand */
+  background-color: #333; /* Dunkler Hintergrund */
+  color: white; /* Weiße Schrift */
+  flex-wrap: wrap; /* Zeilenumbruch für kleine Bildschirme */
+  font-size: 14px; /* Einheitliche Schriftgröße */
+  width: 100%; /* Volle Breite */
+  margin-top: auto; /* Schiebt den Footer an das Ende der Seite */
 }

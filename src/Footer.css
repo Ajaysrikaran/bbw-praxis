@@ -1,0 +1,108 @@
+/* Footer-Hauptcontainer */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Navigation links, Kontakt rechts */
+    align-items: flex-start;
+    padding: 20px 100px; /* Mehr Innenabstand links und rechts */
+    background-color: #01030B; /* Dunkler Hintergrund */
+    color: white; /* Weiße Schrift */
+    flex-wrap: wrap; /* Umbruch bei kleinen Bildschirmen erlauben */
+    font-size: 16px; /* Einheitliche größere Schriftgröße */
+    width: 100%; /* Volle Breite */
+    box-sizing: border-box; /* Padding zur Breite hinzufügen */
+    margin-top: auto; /* Footer ans Ende der Seite schieben */
+    border-top: 1px solid #444; /* Dezente obere Linie */
+}
+
+/* Navigation */
+.footer-navigation {
+    flex: 1; /* Gleicher Platz für Navigation */
+    margin-right: 20px; /* Abstand zur Mitte */
+    text-align: left; /* Links ausrichten */
+}
+
+.footer-navigation h3 {
+    margin-bottom: 10px;
+    color: #ffdd57; /* Gelbe Farbe für Überschrift */
+    font-size: 18px; /* Größere Schrift für die Überschrift */
+}
+
+.footer-navigation ul {
+    list-style-type: none; /* Entfernt Aufzählungszeichen */
+    margin: 0;
+    padding: 0;
+}
+
+.footer-navigation li {
+    margin: 5px 0; /* Abstand zwischen den Einträgen */
+}
+
+.footer-navigation a {
+    color: #ffdd57; /* Gelbe Links */
+    text-decoration: none; /* Unterstrich entfernen */
+    transition: color 0.3s;
+    font-size: 16px; /* Größere Schrift für Links */
+}
+
+.footer-navigation a:hover {
+    color: white; /* Weiße Links beim Hover */
+}
+
+/* Kontakt */
+.footer-contact {
+    flex: 1; /* Gleicher Platz für Kontakt */
+    margin-left: 20px; /* Abstand zur Mitte */
+    text-align: right; /* Rechts ausrichten */
+}
+
+.footer-contact h3 {
+    margin-bottom: 10px;
+    color: #ffdd57; /* Gelbe Farbe für Überschrift */
+    font-size: 18px; /* Größere Schrift für die Überschrift */
+}
+
+.footer-contact ul {
+    list-style-type: none; /* Entfernt Aufzählungszeichen */
+    margin: 0;
+    padding: 0;
+}
+
+.footer-contact li {
+    margin: 5px 0; /* Abstand zwischen den Einträgen */
+    font-size: 16px; /* Größere Schrift für die Kontaktinformationen */
+}
+
+.footer-contact a {
+    color: #ffdd57; /* Gelbe Links */
+    text-decoration: none; /* Unterstrich entfernen */
+    transition: color 0.3s;
+    font-size: 16px; /* Größere Schrift für Links */
+}
+
+.footer-contact a:hover {
+    color: white; /* Weiße Links beim Hover */
+}
+
+/* Footer-Zusatzinfo */
+.footer-info {
+    flex-basis: 100%; /* Nimmt die gesamte Breite ein */
+    text-align: center; /* Zentrierter Text */
+    margin-top: 10px; /* Geringer Abstand nach oben */
+    font-size: 14px; /* Größere Schrift für Zusatzinfo */
+    color: #aaa; /* Hellgrau */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Staple Navigation und Kontakt übereinander */
+        text-align: center; /* Zentriere Inhalte bei kleinen Bildschirmen */
+    }
+
+    .footer-navigation, .footer-contact {
+        margin: 10px 0; /* Abstand oben und unten */
+        text-align: center; /* Inhalte zentrieren */
+    }
+}
