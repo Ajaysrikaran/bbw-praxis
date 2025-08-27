@@ -1,29 +1,18 @@
-## Quick Start
+# bbw-praxis – PC-Hardware Projekt
 
-Run the following commands:
+Eine kleine React-Anwendung rund um **PC-Hardware**.  
+Die App zeigt die wichtigsten Komponenten meines persoenlichen PCs und dient als Uebung mit React, Routing und optionaler Mock-API.
 
-```
-npm install
-npm start
-```
+## Features
 
-This will install dependencies, then start the app and mock API.
+* Uebersicht ueber PC-Komponenten wie CPU, GPU, RAM, Speicher, Netzteil
+* Navigation zwischen Seiten mit React Router
+* Daten koennen aus einer einfachen Mock-API (json-server) kommen
+* Klare Struktur mit eigenen Komponenten
 
-## Starter Project Overview
+## Schnellstart
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-I made the following enhancements:
-
-1. Added a mock API using [json-server](https://github.com/typicode/json-server). Configured `npm start` to run the app and mock API at the same time using [npm-run-all](https://www.npmjs.com/package/npm-run-all). See [Building Applications with React and Flux](https://app.pluralsight.com/library/courses/react-flux-building-applications/table-of-contents) for details on how to set this up from scratch.
-1. Installed [react-router-dom](https://www.npmjs.com/package/react-router-dom), [history](https://www.npmjs.com/package/history) (React Router peer dependency), and [cross-env](https://www.npmjs.com/search?q=cross-env) for declaring environment variables.
-1. Added some React components to help us get started: Header, Footer, Spinner
-1. Added styles to App.css
-1. Added `/public/images`.
-1. Added data fetching functions in `/src/services`.
-1. Added db.json to root as json-server's mock database
-1. Overwrote App.css with custom styles
-1. Simplified index.js (removed service worker)
-1. Deleted from src: index.css, logo.svg, serviceWorker.js, App.test.js
-1. Deleted from public: logo files, manifest.json, robots.txt
-1. Customized App.js and renamed to App.jsx
+1. Repository klonen
+   ```bash
+   git clone https://github.com/Ajaysrikaran/bbw-praxis
+   cd bbw-praxis
